@@ -1,0 +1,44 @@
+.hamb { 
+    display: none;/* Hidden by default */ 
+    flex-direction: row; /* Stack items horizontally */ 
+    position: relative; 
+    top: -23px; 
+    opacity: .5; /* Starts invisible */ 
+    transform: translateY(-10px); /* Slightly above its final position */ 
+    transition: opacity 0.4s ease, transform 0.4s ease; /* Smooth animation */
+} 
+.hamb.show-hamb { 
+    display: flex; /* Show when toggled */ 
+    opacity: 1; /* Fully visible */ 
+    transform: translateY(0); /* Drops smoothly into place */ 
+} 
+.hamb > .nav-link { 
+    width: 100%; 
+    text-align: center; 
+} 
+.hamb > .nav-link a { 
+    font-family: "Ubuntu Condensed", sans-serif; 
+    color: #cbcbcb; 
+    text-decoration: none; 
+    transition: 0.5s; 
+    font-size: 18px; 
+} 
+.hamb > .nav-link a:hover { 
+    color: #b22111; 
+    letter-spacing: 2px;
+ }
+ /* Ensure the toggle button is positioned well */ 
+.hamb-toggle { 
+    background: none; 
+    border: none; 
+    font-size: 24px; 
+    cursor: pointer; 
+    color: white; 
+} 
+.show-hamb { 
+    display: block; 
+}
+
+.show-hamb {
+    display: block;
+}

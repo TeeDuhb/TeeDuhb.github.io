@@ -7,7 +7,7 @@
 
 .company-metadata-siderbar-wrapper > .logo img {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 17px;
 }
 
 .company-metadata-siderbar-wrapper > .company-details-wrapper {
@@ -16,12 +16,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 17px;
+    margin-bottom: 23px;
     text-align: right;
     font-size: 1.25em;
 }
 
 .company-metadata-siderbar-wrapper > .company-details-wrapper i {
-    color: #cea135;
+    color: #ff9900;
 }

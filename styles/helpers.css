@@ -9,6 +9,11 @@
     width: 100%;
 }
 
+.spacer-60 {
+    height: -60px;
+    width: 100%;
+}
+
 .anchor-link {
     text-decoration: none;
 }
@@ -17,7 +22,7 @@
     outline: none;
 }
 
-.anchor-link h1::after {
+.anchor-link h2::after {
     font-family: "Font Awesome 5 Free";
     content: " \f0c1";
     font-weight: 900;

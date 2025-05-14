@@ -1,8 +1,8 @@
 /* Hero section styles */
 .hero-section {
-    background-image: url(../images/background/fries-hero-bg.jpg);
+    background-image: url(../images/background/NewCover.jpg);
     padding: 100px;
-    height: 300px;
+    height: 420px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -12,32 +12,32 @@
 .hero-section > .top-heading {
     background-color: #11122b;
     color: #cbcbcb;
-    width: 290px;
-    border-radius: 2px;
+    width: 420px;
+    border-radius: 3px;
     padding: 1px 20px;
 }
 
 .hero-section > .bottom-heading {
-    background-color: #cea135;
+    background-color: #ff9900;
     color: #11122b;
     padding: 1px 20px;
     margin-top: 15px;
-    width: 107px;
-    border-radius: 2px;
+    width: 151px;
+    border-radius: 5px;
 }
 
 /* Features section styles */
 .features-section {
-    height: 400px;
-    background-image: url(../images/background/fries-multiply-bg.jpg);
-    background-color: #cea135;
-    border-top: 10px solid white;
+    height: 375px;
+    background-image: url(../images/background/APE.jpg);
+    background-color: #ff9900;
     color: #11122b;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: "Ubuntu Condensed", sans-serif;
-    box-shadow: inset 0px -26px 79px -8px rgba(0, 0, 0, 0.58);
+    font-weight: 1000;
+    box-shadow: inset 0px -23px 77px -9px rgba(0, 0, 0, 0.58);
 }
 
 .features-section > .columns-wrapper {
@@ -47,14 +47,17 @@
 }
 
 .features-section > .columns-wrapper > .column {
-    padding: 20px;
+    padding: 17px;
     margin: 42px;
     text-align: center;
     border-bottom: 5px solid transparent;
-    border-radius: 10px;
+    border-radius: 13px;
     transition: 1s;
 }
 
+.features-section > .columns-wrapper > .column i {
+color: #11122b;
+}
 .features-section > .columns-wrapper > .column:hover {
     border-bottom: 5px solid #11122b;
 }
@@ -65,7 +68,7 @@
 
 .features-section > .columns-wrapper > .column :nth-child(2) {
     font-size: 1.5em;
-    font-weight: 900;
+    font-weight: 1001;
     height: 50px;
     transition: 1s;
 }

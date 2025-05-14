@@ -4,70 +4,62 @@
     <meta charset="uft-8" />
     <title>Homepage</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
-
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Domine:wght@400..700&display=swap" 
+        rel="stylesheet">
+    <!--Icons-->
     <script src="https://kit.fontawesome.com/fcaf4e35d0.js" crossorigin="anonymous"></script>
+    <!--Stylesheets-->
     <link rel="stylesheet" href="styles/nav.css">
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/homepage.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/media-queries.css">
+    <link rel="stylesheet" href="styles/hamb.css">
 
+    <!--FavIcon-->
+    
 </head>
 <body>
     <div class="navigation-wrapper">
-        
         <div class="left-column">
             <div class="icon">
-                <i class="fas fa-phone-volume"></i>
+                <a href="tel:720-460-0803">
+                    <i class="fas fa-phone-volume"></i>
+                </a>
             </div>
-
             <div class="contact-hour-wrapper">
                 <div class="phone">
-                    555-555-5555
+                    (720)<br>460-0803
                 </div>
-
                 <div class="hours">           
-                    10AM - MIDNIGHT
+                    23 Hour
                 </div>
             </div>
         </div>
-        
         <div class="center-column">
             <div class="banner-image">
-                <img src="images/logos/decamp-fantastic-fries-logo-white.png" alt="Logo">
+                <img src="images/logos/Logo2.AVIF" alt="Logo">
             </div>
-
-            <div class="links-wrapper">
-                <div class="nav-link">
-                    <a href="index.html">Home</a>
-                </div>
-
+            <button class="hamb-toggle">☰</button>
+            <nav class="hamb">
                 <div class="nav-link">
                     <a href="about.html">About</a>
                 </div>
-
                 <div class="nav-link">
-                    <a href="menu.html">Menu</a>
+                    <a href="menu.html">Services</a>
                 </div>
-
                 <div class="nav-link">
                     <a href="contact.html">Contact</a>
                 </div>
-            </div>
+            </nav>
         </div>
-
         <div class="right-column">
             <div class="address-wrapper">
-                    <a href="contact.html"> 
-                        123 Any Street <br>
-                        Denver, CO 80204
-                    </a>
+                    Denver, CO
             </div>
-
             <div class="contact-icon">
                 <a href="contact.html">
                     <i class="fas fa-map-marker-alt"></i>
@@ -78,90 +70,84 @@
 
     <div class="hero-section">
         <div class="top-heading">
-            <h1>HTML Styled Fries</h1>
+            <h1>TW&A</h1>
         </div>
-
         <div class="bottom-heading">
-            <h3>Coding Fuel</h3>
+            <h2>Tagline!</h2>
         </div>
     </div>
 
     <div class="features-section">
         <div class="columns-wrapper">
             <div class="column">
-                <i class="fas fa-truck-monster"></i>
-                <p>We Deliver!</p>
-
+                <i class="fas fa-hands-helping"></i>
+                <p>Professional!</p>
                 <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 </p>
             </div>
-
             <div class="column">
-                <i class="fas fa-wifi"></i>
-                <p>You can code from here</p>
-    
+                <i class="fas fa-folder-open"></i>
+                <p>Accessible!</p>
                 <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 </p>
             </div>
-
             <div class="column">
                 <i class="fas fa-chart-line"></i>
-                <p>100+ types of fries</p>
-        
+                <p>Developing!</p>
                 <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 </p>
             </div>
-        
         </div>
     </div>
-
-    <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3068.4531777416764!2d-105.00468268438497!3d39.72947010507228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c7f3130959c1d%3A0xa20472c78010f898!2s832%20Mariposa%20St%2C%20Denver%2C%20CO%2080204!5e0!3m2!1sen!2sus!4v1573408792943!5m2!1sen!2sus" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe></div>
-
+    <!--
+    <div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d196282.24330261705!2d-105.01956239368583!3d39.76412790571361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b80aa231f17cf%3A0x118ef4f8278a36d6!2sDenver%2C%20CO!5e0!3m2!1sen!2sus!4v1738707381552!5m2!1sen!2sus" 
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+    -->
     <div class="footer-wrapper">
         <div class="logo">
-           <img src="images/logos/decamp-fantastic-fries-logo-white.png" alt="Logo">
+            <img src="images/logos/Logo2.jpg" alt="Logo">
         </div>
-
         <div class="contact-hours-footer">
             <span class="contact">
-                555 555 5555
+                <a href="tel:720-460-0803">
+                    <i class="fas fa-phone-volume"></i>
+                </a>
+                (720)460-0803
             </span>
-
             <span class="time">
-                10 AM - MIDNIGHT
+                11 AM - 7PM
             </span>
         </div>
 
         <div class="links-wrapper">
             <div class="nav-link">
-                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
             </div>
-
             <div class="nav-link">
-                <a href="about.html">About</a>
+                <a href="menu.html">Services</a>
             </div>
-
-            <div class="nav-link">
-                <a href="menu.html">Menu</a>
-            </div>
-
             <div class="nav-link">
                 <a href="contact.html">Contact</a>
             </div>
         </div>
 
         <div class="social-wrapper">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.FaceBook.COM/TeeDuhb.Plural"><i class="fab fa-facebook-f"><img src="images/LIKE.png"></i></a>
+          <a href="https://www.Instagram.COM/TeeDuhb"><i class="fab fa-instagram"><img src="images/1f481_1f3fd.png"></i></a>
+          <a href="https://www.X.COM/TeeDuhb"><i class="fab fa-twitter"><img src="images/_ZvGTxrlsmm.png"></i></a>
+          <a href="https://www.youtube.com/@TeeDuhb."><i class="fab fa-youtube"></i></a>
         </div>
 
         <div class="copyright">
-            &copy; 2019 TeeDuhb &#124; All rights reserved
+            &copy; 2019-2025 @TeeDuhb &#124; All rights reserved
         </div>
     </div>
+<script src="styles/script.js"></script>  
 </body>
 </html>

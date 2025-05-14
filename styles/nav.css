@@ -1,8 +1,9 @@
 /* Common nav styles */
 .navigation-wrapper {
-    height: 190px;
-    background-color: #11122b;
-    color: #cbcbcb;
+    position: relative; /* Ensures absolute children position correctly */
+    height: 151px;
+    background-color: #ff9900;
+    color: #11122b;
     /* flexbox container */
     display: flex;
     justify-content: space-between;
@@ -22,6 +23,12 @@
 
 .navigation-wrapper > .left-column > .icon i {
     font-size: 2em;
+    color: #cbcbcb;
+    transition: 0.3s;
+}
+
+.navigation-wrapper > .left-column > .icon i:hover {
+color: #b22111;
 }
 
 .navigation-wrapper > .left-column > .contact-hour-wrapper {
@@ -32,21 +39,16 @@
 
 .navigation-wrapper > .left-column > .contact-hour-wrapper > .hours {
     font-family: 'Ubuntu Condensed', sans-serif;
-    color: #858585;
+    color: #676767;
     font-size: 0.8em;
-}
-
-.links-wrapper > .nav-link a {
-    font-family: 'Ubuntu Condensed', sans-serif;
-    color: white;
 }
 
 /* Center column styles */
 .navigation-wrapper > .center-column {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 42px;
-    width: 500px;
+    grid-gap: 37px;
+    width: 420px;
 }
 
 .navigation-wrapper > .center-column > .banner-image {
@@ -55,7 +57,7 @@
 }
 
 .navigation-wrapper > .center-column > .banner-image img {
-    width: 216px;
+    width: 234px;
     height: 100%;
 }
 
@@ -66,7 +68,7 @@
 }
 
 .links-wrapper > .nav-link {
-    width: 70px;
+    width: 123px;
     text-align: center;
 }
 
@@ -74,11 +76,11 @@
     font-family: "Ubuntu Condensed", sans-serif;
     color: #cbcbcb;
     text-decoration: none;
-    transition: 0.5s;
+    transition: 0.7s;
 }
 
 .links-wrapper > .nav-link a:hover {
-    color: #cea135;
+    color: #b22111;
     letter-spacing: 2px;
 }
 
@@ -97,11 +99,11 @@
     color: #858585;
     text-decoration: none;
     font-size: 0.9em;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .navigation-wrapper > .right-column > .address-wrapper a:hover {
-    color: #cea135;
+    color: #b22111;
 }
 
 .navigation-wrapper > .right-column > .contact-icon {
@@ -111,9 +113,9 @@
 
 .navigation-wrapper > .right-column > .contact-icon a {
     color: #cbcbcb;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .navigation-wrapper > .right-column > .contact-icon a:hover {
-color: #cea135;
+color: #b22111;
 }

@@ -7,15 +7,24 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 400px;
-    margin-top: -4px;
+    height: 420px;
+    margin-top: -7px;
 }
 
 .footer-wrapper > .logo img {
-    width: 180px;
+    width: 222px;
     height: 100%;
-    /* opacity: 50%; */
-    filter: brightness(50%);
+    filter: brightness(69%);
+    border-radius: 37%;
+}
+
+i {
+    color: #cbcbcb;
+    transition: 0.3s;
+}
+
+i:hover {
+color: #b22111;
 }
 
 .footer-wrapper > .contact-hours-footer span {
@@ -27,36 +36,46 @@
 
 .footer-wrapper > .contact-hours-footer > .time {
     font-size: .8em;
-    color: #cea135;
+    color: #ff9900;
     text-transform: uppercase;
+    font-weight: 900;
+
 }
 
 .footer-wrapper > .links-wrapper {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    width: 400px;
+    margin-top: 37px;
+    margin-bottom: 37px;
+    width: 420px;
 }
 
 .footer-wrapper > .social-wrapper {
-    margin-top: 20px;
-    margin-bottom: 40px;
-    width: 300px;
+    margin-top: 23px;
+    margin-bottom: 37px;
+    width: 370px;
     display: flex;
     justify-content: space-around;
 }
 
-.footer-wrapper > .social-wrapper a {
+ a {
     font-size: 1.5em;
     color: #cbcbcb;
     transition: 0.5s;
+    text-decoration: none;
 }
 
-.footer-wrapper > .social-wrapper a:hover {
-    color: #cea135;
+ a:hover {
+    color: #b22111;
+    text-decoration: none;
 }
 
 .footer-wrapper > .copyright {
     color: #858585;
+    font-size: 70%;
+    margin-bottom: 42px;
+}
+
+.footer-wrapper > .disclaimer {
+    color: #5cdbe9;
     font-size: 70%;
     margin-bottom: 42px;
 }

@@ -1,4 +1,4 @@
-@media (max-width: 615px) {
+@media (max-width: 777px) {
     .navigation-wrapper {
         flex-direction: column;
         height: 100%;
@@ -6,7 +6,7 @@
 
     .navigation-wrapper > .left-column {
         order: 2;
-        margin-bottom: 15px;
+        margin-bottom: 11px;
     }
 
     .navigation-wrapper > .center-column {
@@ -16,17 +16,17 @@
 
     .navigation-wrapper > .right-column {
         order: 3;
-        margin-top: 15px;
+        margin-top: 11px;
     }
 
     .links-wrapper {
         flex-direction: column;
-        margin-bottom: 20px;
+        margin-bottom: 11px;
     }
 
     .links-wrapper > .nav-link {
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin-top: 3px;
+        margin-bottom: 11px;
         font-size: 1.5em;
         width: 100%;
     }
@@ -53,16 +53,18 @@
     }
 
     .skewed-header > .header-bg {
-        background-size: 550px;
+        background-size: 100%;
     }
 
     .page-container {
-        padding-left: 21px;
-        padding-right: 21px;
+        padding-left: 1px;
+        padding-right: 13px;
+        margin-left: 3px;
+
     }
 
-    .page-container > .content-wrapper > #chef {
-        margin: 0px 0px 25px 0px;
+    .page-container > .content-wrapper > #me {
+        margin: 0px 0px 23px 0px;
         width: 100%
     }
 
@@ -85,10 +87,12 @@
     }
 
     .form input {
-        padding: 1.5rem 0rem;
+        padding: 1.5rem 1rem;
+        margin-left: 23px;
     }
 
     .form textarea {
-        padding: 1.5rem 0rem;
+        padding: 1.5rem .5rem;
+        margin-left: 23px;
     }
 }
