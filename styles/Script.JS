@@ -1,24 +1,16 @@
-/*document.querySelector(".hamb-toggle").addEventListener("click", function() {
-    document.querySelector(".hamb").classList.toggle("show-hamb");
-});*/
-
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.querySelector(".hamb-toggle");
-    const menu = document.querySelector(".hamb");  // Ensure this matches your updated class name
+    const menu = document.querySelector(".hamb");
+    const yearNode = document.querySelector("[data-current-year]");
 
-    console.log("Script loaded and elements selected."); // This will help confirm execution
+    if (yearNode) {
+        yearNode.textContent = new Date().getFullYear();
+    }
 
-    if (menuToggle && menu) { // Prevent errors if elements aren't found
+    if (menuToggle && menu) {
         menuToggle.addEventListener("click", function () {
-            console.log("Toggle clicked!");  // Check if this appears when clicking the button
-            menu.classList.toggle("show-hamb"); // Updated to match new class name
-    });
-    } else {
-        console.error("Menu or toggle button not found!");
+            const isOpen = menu.classList.toggle("show-hamb");
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+        });
     }
 });
-
-
-//Legacy?
-var total = "124.0" 
-console.log(typeof total);
