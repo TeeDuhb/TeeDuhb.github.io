@@ -18,14 +18,17 @@
 } 
 .hamb > .nav-link a { 
     font-family: "Ubuntu Condensed", sans-serif; 
-    color: #cbcbcb; 
+    color: #11122b; 
     text-decoration: none; 
     transition: 0.5s; 
     font-size: 18px; 
 } 
 .hamb > .nav-link a:hover { 
-    color: #b22111; 
+    color: #11122b; 
     letter-spacing: 2px;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
  }
  /* Ensure the toggle button is positioned well */ 
 .hamb-toggle { 
@@ -33,8 +36,19 @@
     border: none; 
     font-size: 24px; 
     cursor: pointer; 
-    color: white; 
+    color: #11122b;
+    border-radius: 4px;
 } 
+
+.hamb-toggle:hover {
+    background-color: rgba(17, 18, 43, 0.1);
+}
+
+.hamb-toggle:focus-visible,
+.hamb a:focus-visible {
+    outline: 3px solid #11122b;
+    outline-offset: 4px;
+}
 .show-hamb { 
     display: block; 
 }

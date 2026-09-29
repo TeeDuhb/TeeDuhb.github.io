@@ -1,4 +1,7 @@
 @media (max-width: 777px) {
+.skewed-header .heading-wrapper p {
+    display: none;
+}
     .navigation-wrapper {
         flex-direction: column;
         height: 100%;
