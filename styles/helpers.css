@@ -19,10 +19,15 @@
 }
 
 .anchor-link:focus {
-    outline: none;
+    outline: 3px solid #11122b;
 }
 
 .anchor-link h2::after {
+    font-family: "Font Awesome 5 Free";
+    content: " \f0c1";
+    font-weight: 900;
+}
+.anchor-link h1::before {
     font-family: "Font Awesome 5 Free";
     content: " \f0c1";
     font-weight: 900;

@@ -1,58 +1,221 @@
-.hamb { 
-    display: none;/* Hidden by default */ 
-    flex-direction: row; /* Stack items horizontally */ 
-    position: relative; 
-    top: -23px; 
-    opacity: .5; /* Starts invisible */ 
-    transform: translateY(-10px); /* Slightly above its final position */ 
-    transition: opacity 0.4s ease, transform 0.4s ease; /* Smooth animation */
-} 
-.hamb.show-hamb { 
-    display: flex; /* Show when toggled */ 
-    opacity: 1; /* Fully visible */ 
-    transform: translateY(0); /* Drops smoothly into place */ 
-} 
-.hamb > .nav-link { 
-    width: 100%; 
-    text-align: center; 
-} 
-.hamb > .nav-link a { 
-    font-family: "Ubuntu Condensed", sans-serif; 
-    color: #11122b; 
-    text-decoration: none; 
-    transition: 0.5s; 
-    font-size: 18px; 
-} 
-.hamb > .nav-link a:hover { 
-    color: #11122b; 
-    letter-spacing: 2px;
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
- }
- /* Ensure the toggle button is positioned well */ 
-.hamb-toggle { 
-    background: none; 
-    border: none; 
-    font-size: 24px; 
-    cursor: pointer; 
-    color: #11122b;
-    border-radius: 4px;
-} 
-
-.hamb-toggle:hover {
-    background-color: rgba(17, 18, 43, 0.1);
+.home-menu-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1002;
+    display: grid;
+    width: 58px;
+    height: 58px;
+    place-items: center;
+    border: 2px solid #ffb347;
+    border-radius: 12px;
+    background: #11122b;
+    color: #ffb347;
+    box-shadow: 0 8px 26px rgba(17, 18, 43, 0.35);
+    cursor: pointer;
+    font-size: 2rem;
+    line-height: 1;
 }
 
-.hamb-toggle:focus-visible,
-.hamb a:focus-visible {
+.home-menu-toggle:hover {
+    background: #25264a;
+}
+
+.home-menu-toggle:focus-visible,
+.home-menu-links a:focus-visible {
     outline: 3px solid #11122b;
-    outline-offset: 4px;
-}
-.show-hamb { 
-    display: block; 
+    outline-offset: 5px;
 }
 
-.show-hamb {
-    display: block;
+.home-menu-toggle.is-static .home-menu-toggle-glyph {
+    animation: menu-static 100ms steps(2, end) infinite;
+}
+
+.home-menu-overlay {
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
+    padding: clamp(90px, 12vh, 140px) clamp(24px, 8vw, 120px) 48px;
+    flex-direction: column;
+    justify-content: center;
+    gap: clamp(28px, 6vh, 64px);
+    overflow-y: auto;
+    background-color: #ff9900;
+    background-image:
+        repeating-linear-gradient(45deg, transparent 0 28px, rgba(17, 18, 43, 0.08) 28px 29px, transparent 29px 58px),
+        repeating-linear-gradient(-45deg, transparent 0 28px, rgba(255, 255, 255, 0.14) 28px 29px, transparent 29px 58px);
+    clip-path: circle(0 at 49px 49px);
+    visibility: hidden;
+    pointer-events: none;
+    transition: clip-path 760ms cubic-bezier(0.7, 0, 0.2, 1), visibility 0s linear 760ms;
+}
+
+.home-menu-overlay.is-opening {
+    clip-path: circle(150vmax at 49px 49px);
+    visibility: visible;
+    pointer-events: auto;
+    transition: clip-path 760ms cubic-bezier(0.7, 0, 0.2, 1), visibility 0s;
+}
+
+.home-menu-overlay::after {
+    position: fixed;
+    z-index: 1;
+    inset: 0;
+    background-image: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.16) 0 1px, transparent 1px 3px);
+    content: "";
+    opacity: 0;
+    pointer-events: none;
+}
+
+.home-menu-overlay.is-opening::after {
+    animation: overlay-static 380ms steps(2, end);
+}
+
+.home-menu-overlay > * {
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(18px);
+}
+
+.home-menu-overlay.is-content-visible > * {
+    animation: menu-content-reveal 450ms ease forwards;
+}
+
+.home-menu-overlay.is-content-visible > .center-column {
+    animation-delay: 80ms;
+}
+
+.home-menu-overlay.is-content-visible > .right-column {
+    animation-delay: 150ms;
+}
+
+.home-menu-page .home-menu-overlay > .center-column {
+    display: grid;
+    width: min(680px, 100%);
+    gap: clamp(22px, 4vh, 36px);
+}
+
+.home-menu-page .home-menu-overlay > .center-column > .banner-image img {
+    width: clamp(160px, 28vw, 260px);
+    max-height: 30vh;
+    object-fit: contain;
+}
+
+.home-menu-page .home-menu-overlay > .center-column > .home-menu-links {
+    display: flex;
+    position: static;
+    top: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    opacity: 1;
+    transform: none;
+}
+
+.home-menu-links > .nav-link {
+    width: auto;
+    text-align: center;
+}
+
+.home-menu-links > .nav-link a {
+    display: inline-block;
+    padding: 10px 16px;
+    border: 2px solid rgba(17, 18, 43, 0.3);
+    border-radius: 999px;
+    color: #11122b;
+    font-family: "Ubuntu Condensed", sans-serif;
+    font-size: clamp(1.2rem, 2.4vw, 1.65rem);
+    text-decoration: none;
+    transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.home-menu-links > .nav-link a:hover {
+    transform: translateY(-2px);
+    background: #11122b;
+    color: #ffffff;
+}
+
+.home-menu-page .home-menu-overlay > .left-column,
+.home-menu-page .home-menu-overlay > .right-column {
+    justify-content: center;
+}
+
+.home-menu-page .home-menu-overlay > .left-column > .contact-hour-wrapper,
+.home-menu-page .home-menu-overlay > .right-column > .address-wrapper {
+    color: #11122b;
+    font-size: 1.15rem;
+}
+
+.home-menu-page.menu-open {
+    overflow: hidden;
+}
+
+@keyframes menu-static {
+    0% { transform: translate(1px, -1px) skewX(-8deg); opacity: 0.55; }
+    50% { transform: translate(-2px, 1px) skewX(8deg); opacity: 1; }
+    100% { transform: translate(1px, 2px); opacity: 0.7; }
+}
+
+@keyframes overlay-static {
+    0% { opacity: 0.75; transform: translateX(4px); }
+    25% { opacity: 0.2; transform: translateX(-6px); }
+    50% { opacity: 0.65; transform: translateX(2px); }
+    75% { opacity: 0.15; transform: translateX(-2px); }
+    100% { opacity: 0; transform: translateX(0); }
+}
+
+@keyframes menu-content-reveal {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 700px) {
+    .home-menu-toggle {
+        top: 14px;
+        left: 14px;
+        width: 52px;
+        height: 52px;
+    }
+
+    .home-menu-overlay {
+        padding: 88px 20px 30px;
+        gap: 24px;
+        clip-path: circle(0 at 40px 40px);
+    }
+
+    .home-menu-overlay.is-opening {
+        clip-path: circle(180vmax at 40px 40px);
+    }
+
+    .home-menu-page .home-menu-overlay > .center-column > .home-menu-links {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    .home-menu-links > .nav-link a {
+        width: min(100%, 340px);
+        box-sizing: border-box;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .home-menu-overlay,
+    .home-menu-overlay.is-opening {
+        transition-duration: 1ms;
+    }
+
+    .home-menu-toggle.is-static .home-menu-toggle-glyph,
+    .home-menu-overlay.is-opening::after,
+    .home-menu-overlay.is-content-visible > * {
+        animation-duration: 1ms;
+        animation-iteration-count: 1;
+    }
 }

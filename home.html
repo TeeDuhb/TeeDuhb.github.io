@@ -16,8 +16,12 @@
     <link rel="stylesheet" href="styles/media-queries.css">
     <link rel="stylesheet" href="styles/hamb.css">
 </head>
-<body>
-    <div class="navigation-wrapper">
+<body class="home-menu-page">
+    <button class="home-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="home-navigation">
+        <span class="home-menu-toggle-glyph" aria-hidden="true">☰</span>
+    </button>
+
+    <div class="navigation-wrapper home-menu-overlay" id="home-navigation" aria-hidden="true" inert>
         <div class="left-column">
             <div class="icon">
                 <a href="tel:720-460-0803" aria-label="Call TW&A">
@@ -34,11 +38,11 @@
             <div class="banner-image">
                 <img src="images/logos/Logo2.jpg" alt="TW&A logo">
             </div>
-            <button class="hamb-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
-            <nav class="hamb" aria-label="Main navigation">
+            <nav class="hamb home-menu-links" aria-label="Main navigation">
                 <div class="nav-link"><a href="about.html">About</a></div>
                 <div class="nav-link"><a href="menu.html">Services</a></div>
                 <div class="nav-link"><a href="contact.html">Contact</a></div>
+                <div class="nav-link"><a href="product.html">Products LP</a></div>
             </nav>
         </div>
 
@@ -158,6 +162,6 @@
         <div class="copyright">&copy; 2019 - <span data-current-year></span> @TeeDuhb &#124; All rights reserved</div>
     </div>
 
-    <script src="styles/script.js"></script>
+    <script src="styles/Script.JS"></script>
 </body>
 </html>
